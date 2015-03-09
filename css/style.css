@@ -1,0 +1,254 @@
+body {
+    background-color: #dddddd;
+    font-family: "Arial Black";
+    color: white;
+    font-size: 12pt;
+}
+
+header {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@font-face {
+font-family: myfont;
+src: url(../fonts/LiberationMono-Bold.ttf);
+}
+@font-face {
+font-family: myfont2;
+src: url(../fonts/LiberationMono-Regular.ttf);
+}
+
+.logo {
+	background-color: #1e2124;
+	height: 200px;
+	width: 90%;
+	margin: 0 auto;
+}
+#logo-text {
+	font-size: 750%;
+	font-family: myfont;
+}
+#under-logo {
+	font-size: 220%;
+	color: #7a8189;
+	margin-top: -30px;
+	font-family: courier;
+}
+
+.logo2 {
+    background-color: #1e2124;
+    height: 200px;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.animated.fadeIn.top_name {
+    -webkit-animation-duration: 5s;
+    -webkit-animation-delay: 3s;
+    -moz-animation-duration: 5s;
+    -moz-animation-delay: 3s;
+}
+.top_name{
+    position: absolute;
+    font-size: 700%;
+    font-family: myfont;
+    left: calc(50% - 330px);
+    display: block;
+    margin-top: 10px;
+}
+
+.name {
+    font-size: 750%;
+    font-family:  myfont2;
+    display: inline-block;
+    width: 800px;
+    -webkit-animation: myfirst 3s; /* Chrome, Safari, Opera */
+    -moz-animation: myfirst 3s;
+    animation: myfirst 3s;
+
+}
+.name2 {
+    font-size: 750%;
+    font-family:  myfont2;
+    display: inline-block;
+    width: 800px;
+
+}
+.acolada_stanga {
+    position: relative;
+    float: left;
+    color: #7a8189;
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+     0%   { width: 150px}
+    100%  { width: 800px}
+
+}
+@-moz-keyframes myfirst {
+     0%   { width: 150px}
+    100%  { width: 800px}
+
+}
+
+.acolada_dreapta {
+    float: right;
+    color: #7a8189;
+}
+.under-name {
+    font-size: 220%;
+    color: #7a8189;
+    margin-top: -30px;
+    font-family: courier;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-delay: 5s;
+    -moz-animation-duration: 5s;
+    -moz-animation-delay: 5s;
+}
+
+.top_line {
+
+    width: 90%;
+    margin-top: 15px;
+}
+
+.articleTitle {
+    color: #7a8189;
+    font-size: 24pt;
+    text-transform: uppercase;
+}
+
+.allBody {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentPiece {
+/*    width:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 4px outset #5C1E27;
+    border-radius: 10px;
+    padding: 8px;
+*/
+	width:auto;
+	margin: 10px 0;
+	background-color: #f2f2f2;
+	box-shadow: 0px 2px 4px #aaaaaa;
+    padding: 15px 20px;
+    color: #555555;
+}
+
+.soon {
+    color: #339933;
+}
+
+/*IDs*/
+
+.img2 {
+    padding-left: 40px;
+    max-width: 85%;
+
+}
+#picWork a:hover{
+
+}
+#pic
+{
+   max-width: 85%;
+   position:relative;
+}
+
+
+/* ------------------ flipping---------------------*/
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000;
+     margin-left: 35px;
+}
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+.flip-container, .front, .back {
+    width: 307px;
+    height: 408px;
+}
+
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+    background: #2b2f3a;
+    color: white;
+
+    line-height: 408px;
+    text-align: center;
+}
+
+
+/* ------------------ flipping---------------------*/
+
+/*Comments*/
+
+/*LINKS*/
+
+a:link {
+    text-decoration: none;
+    color: #082038;
+}
+
+
+a:visited {
+    text-decoration: underline;
+    color: #082038;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #a7efef;
+}
+
+
+a:active {
+    text-decoration: underline;
+    color: #FF3399;
+}
+
+footer {
+    text-align: center;
+    color: #7a8189;
+}
+

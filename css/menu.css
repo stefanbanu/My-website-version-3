@@ -1,0 +1,804 @@
+            /* meniu principal   */
+#cssmenu {
+  position: relative;
+  height: 44px;
+  /*background: #2b2f3a;*/
+  width: 90%;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+  margin: 0 auto;
+}
+
+#cssmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  background: #2b2f3a;
+}
+
+            /* meniu principal   */
+
+                                           /* iconita home button   */
+.topnav_home {
+    background-image: url('../images/home.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 46%;
+    color:transparent !important;
+    width: 30px;
+    background-size: 50px 40px;
+    display: inline-block;
+	  opacity: 0.45;
+}
+                                            /* iconita projects   */
+
+.topnav_projects {
+    background-image: url('../images/projects.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 46%;
+    color:transparent !important;
+    width: 30px;
+    background-size: 30px 28px;
+    display: inline-block;
+
+}
+                                            /* iconita contacts   */
+.topnav_contacts {
+    background-image: url('../images/contacts.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    color:transparent !important;
+    width: 30px;
+    background-size: 37px 37px;
+    display: inline-block;
+  opacity: 0.45;
+}
+                                          /* iconita linkedin etc.   */
+#cssmenu ul ul li a.topnav_linkedin {
+    background-image: url('../images/linkedin.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 46%;
+    color:transparent !important;
+    background-size: 23px 23px;
+    display: inline-block;
+	opacity: 0.45;
+}
+
+#cssmenu ul ul li a.topnav_googleplus {
+    background-image: url('../images/googleplus_alb.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 46%;
+    color:transparent !important;
+    background-size: 23px 23px;
+    display: inline-block;
+	opacity: 0.45;
+}
+
+#cssmenu ul ul li a.topnav_twitter {
+    background-image: url('../images/twitter_alb.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 46%;
+    color:transparent !important;
+    background-size: 23px 23px;
+    display: inline-block;
+	opacity: 0.45;
+}
+
+#cssmenu ul ul li a.topnav_github {
+    background-image: url('../images/github_alb.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 46%;
+    color:transparent !important;
+    background-size: 37px 37px;
+    display: inline-block;
+	opacity: 0.45;
+}
+
+#cssmenu ul ul li a.topnav_youtube {
+    background-image: url('../images/youtube_alb.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 46%;
+    color:transparent !important;
+    background-size: 31px 31px;
+    display: inline-block;
+	opacity: 0.45;
+}
+
+#cssmenu ul ul li a.topnav_facebook {
+    background-image: url('../images/facebook_alb.svg');
+    background-repeat:no-repeat;
+    background-position: 50% 46%;
+    color:transparent !important;
+    background-size: 21px 21px;
+    display: inline-block;
+	opacity: 0.45;
+}
+                                                  /* end contacts   */
+
+ /* iconita home opacity   */
+.icon-active {
+	opacity: 1;
+}
+
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ /* asezare meniu in linie   */
+#cssmenu > ul > li {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/*hidding MENU */
+#cssmenu > ul > #menu-button {
+  display: none;
+}
+ /* asezare indicator langa projects   */
+#cssmenu ul li a {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+}
+ /* style pentru text din meniu  */
+#cssmenu > ul > li > a {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 20px;
+  color: #7a8189;
+  text-transform: uppercase;
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -ms-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+#cssmenu > ul > li > a.link-active {
+	color: #fff;
+  opacity: 1;
+}
+#cssmenu > ul > li > a.link-inactive {
+  color: #fff;
+  opacity: 0.45;
+}
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 32px;
+}
+#cssmenu > ul > li > a:hover{
+  cursor: pointer;
+}
+#cssmenu > ul > li:hover > a {
+  background-color: #1E2124;
+  color: #ffffff;
+  opacity: 1;
+}
+ /* style, asezare indicator   */
+#cssmenu li.has-sub::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+ /* style, asezare indicator   */
+#cssmenu > ul > li.has-sub::after {
+  right: 10px;
+  top: 20px;
+  border: 5px solid transparent;
+  border-top-color: #7a8189;
+}
+/*culoare indicator*/
+#cssmenu > ul > li:hover::after {
+  border-top-color: #ffffff;
+}
+#indicatorContainer {
+  position: absolute;
+  height: 12px;
+  width: 100%;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+#pIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  z-index: -2;
+  -webkit-transition: left .25s ease;
+  -moz-transition: left .25s ease;
+  -ms-transition: left .25s ease;
+  -o-transition: left .25s ease;
+  transition: left .25s ease;
+}
+#cIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  top: -12px;
+  right: 100%;
+  z-index: -2;
+}
+ /* miscarea submeniului de la Projects  */
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+  top: 70px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease, top .25s ease;
+  -moz-transition: opacity .3s ease, top .25s ease;
+  -ms-transition: opacity .3s ease, top .25s ease;
+  -o-transition: opacity .3s ease, top .25s ease;
+  transition: opacity .3s ease, top .25s ease;
+  z-index: 1000;
+    box-shadow: 0px 1px 2px #555555;
+}
+ /* pozitionarea submeniurilor de la projects   */
+#cssmenu ul ul li {
+  position: relative;
+  background: #1E2124;
+}
+#cssmenu ul ul li:hover{
+  background: #f2f2f2;
+  cursor: pointer;
+}
+#cssmenu ul  ul  li:hover  a.topnav_linkedin {
+    background-image: url('../images/linkedin_blue.svg');
+	opacity: 1;
+}
+#cssmenu ul ul li:hover a.topnav_googleplus {
+    background-image: url('../images/googleplus_red.svg');
+	opacity: 1;
+}
+
+#cssmenu ul ul li:hover a.topnav_twitter {
+    background-image: url('../images/twitter.svg');
+	opacity: 1;
+}
+
+#cssmenu ul ul li:hover a.topnav_github {
+    background-image: url('../images/github_black.svg');
+	opacity: 1;
+}
+#cssmenu ul ul li:hover a.topnav_youtube {
+    background-image: url('../images/youtube_red.svg');
+	opacity: 1;
+}
+
+#cssmenu ul ul li:hover a.topnav_facebook {
+    background-image: url('../images/facebook.svg');
+	opacity: 1;
+}
+ /* distantare submeniurilor de la projects   */
+#cssmenu > ul > li:hover > ul {
+  left: auto;
+  top: 44px;
+  opacity: 1;
+}
+#cssmenu.align-right > ul > li:hover > ul {
+  left: auto;
+  right: 0;
+  opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+  left: 100px;
+  top: 0;
+  opacity: 1;
+
+}
+ /* dimensiunea submeniurilor de la projects   */
+#cssmenu ul ul li a {
+  width: 60px;
+/*   border-bottom: 1px solid #eeeeee; */
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+
+}
+ /* background culoare la submeniuri - projects   */
+#cssmenu ul ul li:hover > a {
+  color: #2b2f3a;
+}
+ /* asezare, culoare indicator stanga submeniuri - projects  */
+
+/*#cssmenu > ul > li > ul::after {
+  content: '';
+  border: 6px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: #ffffff;
+  border-bottom-color: #1E2124;
+  position: absolute;
+  top: -12px;
+  left: 30px;
+}*/
+
+#cssmenu ul ul li.has-sub::after {
+  border: 5px solid transparent;
+  border-left-color: #fff;
+  right: 10px;
+  top: 12px;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+
+
+#cssmenu ul ul li.has-sub:hover::after {
+  border: 5px solid transparent;
+  border-left-color: #2b2f3a;
+  right: -5px;
+  /*-webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);*/
+}
+
+#cssmenu.align-right ul ul li.has-sub:hover::after {
+  border-right-color: #ffffff;
+  border-left-color: transparent;
+  left: -5px;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+
+@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #cssmenu {
+    width: auto;
+    width: 90%;
+    margin-top: -25px;
+  }
+
+.logo2 {
+	height: 120px;
+}
+   .animated.fadeIn.top_name {
+    -webkit-animation-duration: 5s;
+    -webkit-animation-delay: 3s;
+    -moz-animation-duration: 5s;
+    -moz-animation-delay: 3s;
+}
+.top_name{
+    position: absolute;
+    font-size: 300%;
+    font-family: myfont;
+    left: calc(50% - 135px);
+    margin-top: 10px;
+}
+.name {
+    font-size: 350%;
+    font-family:  myfont2;
+    display: inline-block;
+    width: 350px;
+    -webkit-animation: myfirst 3s; /* Chrome, Safari, Opera */
+    -moz-animation: myfirst 3s; /* Chrome, Safari, Opera */
+    animation: myfirst 3s;
+
+}
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+     0%   { width: 100px}
+    100%  { width: 350px}
+}
+    @-moz-keyframes myfirst {
+     0%   { width: 100px}
+    100%  { width: 350px}
+}
+
+.under-name {
+    font-size: 130%;
+    color: #7a8189;
+    margin-top: -15px;
+    font-family: courier;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-delay: 5s;
+    -moz-animation-duration: 5s;
+    -moz-animation-delay: 5s;
+}
+
+
+
+
+    /* dimensionare meniu */
+  #cssmenu ul {
+    width: auto;
+  }
+/* asezare meniu */
+  #cssmenu > ul {
+    height: auto;
+    display: block;
+	text-align: left;
+	margin-top: 25px;
+  }
+  #cssmenu > ul > li {
+    float: none;
+  }
+  #cssmenu li,
+  #cssmenu > ul > li {
+    display: none;
+  }
+  #cssmenu ul ul,
+  #cssmenu ul ul ul,
+  #cssmenu ul > li:hover > ul,
+  #cssmenu ul ul > li:hover > ul,
+  #cssmenu.align-right ul ul,
+  #cssmenu.align-right ul ul ul,
+  #cssmenu.align-right ul > li:hover > ul,
+  #cssmenu.align-right ul ul > li:hover > ul {
+    position: relative;
+    left: auto;
+    top: auto;
+    opacity: 1;
+    padding-left: 0;
+    padding-right: 0;
+    right: auto;
+    box-shadow: none;
+  }
+  #cssmenu ul .has-sub::after {
+    display: none;
+  }
+  #cssmenu ul li a {
+    padding: 12px 20px;
+/*	font-size: 16px; */
+  }
+  #cssmenu ul ul li a {
+    border: 0;
+    background: none;
+    width: auto;
+    padding: 8px 35px;
+	font-size: 20px;
+  }
+  #cssmenu.align-right ul ul li a {
+    text-align: left;
+	 font-size: 20px;
+  }
+       #cssmenu ul li:hover  {
+    background: #1E1724;
+    color: red;
+  }
+/*    culori submeniuri de la projects */
+  #cssmenu ul ul li:hover > a {
+    background: none;
+    color: #000;
+  }
+
+  #cssmenu ul ul ul a {
+    padding: 8px 50px;
+  }
+  #cssmenu ul ul ul ul a {
+    padding: 8px 65px;
+  }
+  #cssmenu ul ul ul ul ul a {
+    padding: 8px 80px;
+  }
+  #cssmenu ul ul ul ul ul ul a {
+    padding: 8px 95px;
+  }
+  #cssmenu > ul > #menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  #cssmenu #menu-button > a {
+    padding: 14px 20px;
+  }
+  #cssmenu ul.open li,
+  #cssmenu > ul.open > li {
+    display: block;
+  }
+  #cssmenu > ul.open > li#menu-button > a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  #cssmenu ul ul::after {
+    display: none;
+  }
+  #cssmenu #menu-button::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    right: 20px;
+    top: 15px;
+  }
+  #cssmenu #menu-button::before {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #fff;
+    right: 20px;
+    top: 25px;
+  }
+  #cssmenu > ul > li:hover > a {
+   background-color: #1E1724;
+   color: #ffffff;
+
+  }
+  #cssmenu ul.open #menu-button::after,
+  #cssmenu ul.open #menu-button::before {
+  border-color: #fff;
+  }
+    #cssmenu ul ul li a.topnav_linkedin {
+        background-repeat:no-repeat;
+        background-size: 23px 23px;
+        width: 100%;
+        background-position: 35px 46%;
+    }
+
+    #cssmenu ul ul li a.topnav_googleplus {
+    background-repeat:no-repeat;
+    background-size: 23px 23px;
+    width: 100%;
+    background-position: 35px 46%;
+    }
+
+    #cssmenu ul ul li a.topnav_twitter {
+    background-repeat:no-repeat;
+    background-size: 23px 23px;
+    width: 100%;
+    background-position: 35px 46%;
+    }
+
+    #cssmenu ul ul li a.topnav_github {
+        background-repeat:no-repeat;
+        background-size: 37px 37px;
+        width: 100%;
+        background-position: 30px 46%;
+    }
+
+    #cssmenu ul ul li a.topnav_youtube {
+        background-repeat:no-repeat;
+        background-size: 30px 30px;
+        width: 100%;
+        background-position: 33px 46%;
+    }
+
+    #cssmenu ul ul li a.topnav_facebook {
+        background-repeat:no-repeat;
+        background-size: 22px 22px;
+        width: 100%;
+        background-position: 35px 46%;
+    }
+
+    #cssmenu ul li ul.close {
+        visibility: hidden;
+        height: 0px;
+    }
+     .logo {
+
+			height: 200px;
+
+		}
+     #logo-text {
+			font-size: 650%;
+			font-family:  myfont;
+		}
+		#under-logo {
+			font-size: 150%;
+			color: #7a8189;
+			margin-top: -20px;
+			font-family: courier;
+		}
+
+}
+/*---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 800px) and (max-width: 950px) {
+   .top_name{
+    position: absolute;
+    font-size: 550%;
+    font-family: myfont;
+    left: calc(50% - 270px);
+    margin-top: -5px;
+    }
+    .under-name {
+        font-size: 230%;
+        color: #7a8189;
+        margin-top: -35px;
+        font-family: courier;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-delay: 5s;
+        -moz-animation-duration: 5s;
+        -moz-animation-delay: 5s;
+    }
+    .name {
+    font-size: 550%;
+    font-family:  myfont2;
+    display: inline-block;
+    width: 650px;
+    -webkit-animation: myfirst 3s; /* Chrome, Safari, Opera */
+    -moz-animation: myfirst 3s;
+    animation: myfirst 3s;
+
+    }
+    .name2 {
+   font-size: 610%;
+    font-family:  myfont2;
+    display: inline-block;
+    width: 690px;
+
+}
+
+
+    /* Chrome, Safari, Opera */
+    @-webkit-keyframes myfirst {
+                 0%   { width: 100px}
+                100%  { width: 650px}
+        }
+        .logo {
+
+			height: 200px;
+
+		}
+        #logo-text {
+			font-size: 650%;
+			font-family:  myfont;
+		}
+		#under-logo {
+			font-size: 150%;
+			color: #7a8189;
+			margin-top: -20px;
+			font-family: courier;
+		}
+
+}
+
+/*---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 450px) and (max-width: 800px) {
+
+      /* Chrome, Safari, Opera */
+    @-webkit-keyframes myfirst {
+                 0%   { width: 100px}
+                100%  { width: 400px}
+        }
+    @-moz-keyframes myfirst {
+                 0%   { width: 100px}
+                100%  { width: 400px}
+        }
+
+    .top_name{
+    position: absolute;
+    font-size: 340%;
+    font-family: myfont;
+    left: calc(50% - 160px);
+    margin-top: 10px;
+    }
+    .under-name {
+        font-size: 140%;
+        color: #7a8189;
+        margin-top: -25px;
+        font-family: courier;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-delay: 5s;
+        -moz-animation-duration: 5s;
+        -moz-animation-delay: 5s;
+    }
+    .name {
+    font-size: 410%;
+    font-family:  myfont2;
+    display: inline-block;
+    width: 400px;
+    -webkit-animation: myfirst 3s; /* Chrome, Safari, Opera */
+    -moz-animation: myfirst 3s;
+    animation: myfirst 3s;
+
+    }
+    .name2 {
+   font-size: 410%;
+    font-family:  myfont2;
+    display: inline-block;
+    width: 400px;
+
+}
+
+
+        .logo {
+
+			height: 150px;
+
+		}
+        #logo-text {
+			font-size: 380%;
+			font-family:  myfont;
+		}
+		#under-logo {
+			font-size: 150%;
+			color: #7a8189;
+			margin-top: -10px;
+			font-family: courier;
+		}
+
+}
+
+/*---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 340px) and (max-width: 450px) {
+
+    /* Chrome, Safari, Opera */
+    @-webkit-keyframes myfirst {
+                 0%   { width: 100px}
+                100%  { width: 280px}
+        }
+    @-moz-keyframes myfirst {
+                 0%   { width: 100px}
+                100%  { width: 280px}
+        }
+
+      .top_name{
+        position: absolute;
+        font-size: 230%;
+        font-family: myfont;
+        left: calc(50% - 110px);
+        margin-top: 10px;
+    }
+    .under-name {
+        font-size: 110%;
+        color: #7a8189;
+        margin-top: -20px;
+        font-family: courier;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-delay: 5s;
+        -moz-animation-duration: 5s;
+        -moz-animation-delay: 5s;
+    }
+    .name {
+    font-size: 300%;
+    font-family:  myfont2;
+    display: inline-block;
+    width: 280px;
+    -webkit-animation: myfirst 3s; /* Chrome, Safari, Opera */
+    -moz-animation: myfirst 3s;
+    animation: myfirst 3s;
+
+    }
+    .name2 {
+       font-size: 310%;
+        font-family:  myfont2;
+        display: inline-block;
+        width: 290px;
+
+    }
+
+        .logo {
+
+			height: 150px;
+
+		}
+        #logo-text {
+			font-size: 270%;
+			font-family:  myfont2;
+		}
+		#under-logo {
+			font-size: 125%;
+			color: #7a8189;
+			margin-top: -10px;
+			font-family: courier;
+		}
+
+}
+
+
